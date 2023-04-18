@@ -14,13 +14,23 @@ class Authors(models.Model):
     about = models.CharField(max_length=400)
 
 
+class Categories(models.Model):
+    category = models.CharField(max_length=30, null=False, blank=False)
+    type = models.CharField(max_length=11, choices=[
+        ('NF', 'Non-Fiction'),
+        ('FI', 'Fiction')
+    ], null=False, blank=False)
+
+
 class Books(models.Model):
     title = models.CharField(max_length=30, blank=False)
+    language = models.CharField(max_length=10, blank=False)
     author = models.ManyToManyField(Authors)
     price = models.IntegerField()
     cover = models.ImageField(upload_to='uploads/')
     description = models.CharField(max_length=200, blank=False)
     publish_date = models.CharField(max_length=20)
+    category = models.ManyToManyField(Categories)
 
 
 class Order(models.Model):

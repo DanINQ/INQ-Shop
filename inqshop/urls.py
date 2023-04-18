@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from bookshop_app.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('books/', include('bookshop_app.urls'))
+    # path('books/', include('bookshop_app.urls')),
+    # path('cart/', include('bookshop_app.urls'))
+    path('mainpage/', main_page, name='mainpage'),
+    path('cart/', cart, name='cart')
 ]
