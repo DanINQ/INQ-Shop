@@ -10,6 +10,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
 	<title>INQSHOP</title>
 </head>
 
@@ -20,7 +21,7 @@
 			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<a class="navbar-brand mt-2 ms-5" href="{% url 'mainpage' %}"><h1>INQSHOP</h1></a>
+			<a class="navbar-brand mt-2 ms-5" href="{% url 'home' %}"><h1>INQSHOP</h1></a>
 			<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 				<div class="mx-auto my-3 w-50 search-container">
 					<form class="d-flex" role="search">
@@ -41,36 +42,36 @@
 							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 								Categories
 							</a>
-							<div class="dropdown-menu">
-								<ul class="list-group list-group-flush categories-group" id="frst-grp">
-									<p class categories-header>Fiction</p>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Comics & Graphic Novels</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Historical Fiction</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Horror</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Literature & Fiction</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Manga</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Mystery, Thrillers, & Crime</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Poetry</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Fantasy</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">LGBTQ+ Fiction</a></li>
+							<div class="dropdown-menu mx-auto">
+								<ul class="list-group categories-group" id="frst-grp">
+									<p class="categories-header">Fiction</p>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Comics & Graphic Novels</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Historical Fiction</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Horror</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Literature & Fiction</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Manga</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Mystery, Thrillers, & Crime</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Poetry</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Fantasy</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">LGBTQ+ Fiction</a></li>
 								</ul>
 								<ul class="list-group list-group-flush categories-group">
-									<p class categories-header>Non-Fiction</p>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Arts & Photography</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Biography & Memoir</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Business & Investing</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Cooking & Wine</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">History</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Humor & Games</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Science & Technology</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Self Development & Hobbies</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Spirituality & Religion</a></li>
-									<li class="list-group-item"><a class="link-dark link-offset-2" href="#">Travel</a></li>
+									<p class="categories-header">Non-Fiction</p>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Arts & Photography</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Biography & Memoir</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Business & Investing</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Cooking & Wine</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">History</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Humor & Games</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Science & Technology</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Self Development & Hobbies</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Spirituality & Religion</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Travel</a></li>
 								</ul>
 							</div>
 						</li>
 						<li class="nav-item pe-4">
-							<a class="nav-link active" aria-current="page" href="{% url 'mainpage' %}">Home</a>
+							<a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
 						</li>
 						<li class="nav-item pe-4">
 							<a class="nav-link active" aria-current="page" href="#">Special Offers</a>
@@ -85,8 +86,8 @@
 				</div>
 			</div>
 			<div class="left-details">
-				<a href="#" class="link-dark link-offset-3 me-3 mb-lg-1" id="sign-in">
-					<img id="sign-in-icon"src="{% static 'images/account-icon.png' %}">
+				<a href="{% url 'login' %}" class="link-dark link-offset-3 me-3 mb-lg-1" id="login">
+					<img id="login-icon"src="{% static 'images/account-icon.png' %}">
 				</a>
 				<a class="position-relative" href="{% url 'cart' %}">
 					<img class="me-3 mt-lg-1" id="cart-icon" src="{% static 'images/shopping-cart-icon.png' %}">
@@ -179,7 +180,7 @@
 				<p class="bottom-links"><a href="#" class="text-white link-offset-2">About</a></p>
 				<p><a href="#" class="text-white link-offset-2">Support / Help</a></p>
 				<p><a href="#" class="text-white link-offset-2">Contact</a></p>
-				<p><a href="#" class="text-white link-offset-2">Sign In / Join</a></p>
+				<p><a href="{% url 'login' %}" class="text-white link-offset-2">Sign In / Join</a></p>
 				<p><a href="#" class="text-white link-offset-2">Privacy Policy</a></p>
 				<p><a href="#" class="text-white link-offset-2">Terms and Conditions</a></p>
 			</div>

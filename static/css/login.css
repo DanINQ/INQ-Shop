@@ -50,12 +50,21 @@ body {
 	width:40px;
 }
 
-.card-img-top {
-	width:200px;
+#h2-login {
+	font-family: 'Philosopher', sans-serif;
 }
 
-.bestsellers-h3 {
-	margin-left: 15%;
+#login-container {
+	background-color:white;
+	font-family: 'Source Sans 3', sans-serif;
+	font-size: 17px;
+	width:600px;
+}
+
+#login-button {
+	--bs-btn-padding-y: .9rem;
+	--bs-btn-padding-x: 1.5rem;
+	--bs-btn-font-size: 1rem;
 }
 
 #bottom-part {
@@ -110,5 +119,11 @@ body {
 
 	#login-icon {
 		width:28px;
+	}
+}
+
+@media screen and (max-width:600px) {
+	#login-container {
+		width:100%;
 	}
 }

@@ -50,12 +50,21 @@ body {
 	width:40px;
 }
 
-.card-img-top {
-	width:200px;
+#h2-sign-up {
+	font-family: 'Philosopher', sans-serif;
 }
 
-.bestsellers-h3 {
-	margin-left: 15%;
+#sign-up-container {
+	background-color:white;
+	font-family: 'Source Sans 3', sans-serif;
+	font-size: 17px;
+	width:600px;
+}
+
+#sign-up-button {
+	--bs-btn-padding-y: .9rem;
+	--bs-btn-padding-x: 1.5rem;
+	--bs-btn-font-size: 1rem;
 }
 
 #bottom-part {
@@ -89,7 +98,7 @@ body {
 	.dropdown-menu {
 		border-style:none;
 	}
-
+	
 	.categories-group {
 		display:block;
 		float:none;
@@ -110,5 +119,11 @@ body {
 
 	#login-icon {
 		width:28px;
+	}
+}
+
+@media screen and (max-width:600px) {
+	#sign-up-container {
+		width:100%;
 	}
 }
