@@ -18,3 +18,7 @@ def login(request):
 
 def sign_up_page(request):
 	return render(request, 'sign-up.html')
+
+
+def search_category(request):
+	return render(request, 'search-category.html')

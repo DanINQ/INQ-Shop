@@ -38,6 +38,10 @@ body {
 	margin:0px 0px 0px 12px;
 }
 
+.card {
+	width: 18rem;
+}
+
 #cart-icon {
 	width:40px;
 }
@@ -50,6 +54,20 @@ body {
 	width:40px;
 }
 
+.breadcrumb {
+	font-size: 17px;
+}
+
+#sort-by {
+	width:130px;
+	float:right;
+}
+
+#filters-cont {
+	background-color: white;
+	width:300px;
+}
+
 .card {
 	width: 18rem;
 }
@@ -59,9 +77,6 @@ body {
 	padding:0px !important;
 }
 
-.bestsellers-h3 {
-	margin-left: 15%;
-}
 
 #bottom-part {
 	background-color: #891E27;
@@ -115,6 +130,10 @@ body {
 
 	#login-icon {
 		width:28px;
+	}
+
+	#filters-cont {
+		width:100%;
 	}
 }
 

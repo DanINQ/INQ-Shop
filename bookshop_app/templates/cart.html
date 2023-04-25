@@ -11,14 +11,16 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
-	<title></title>
+	<title>Cart</title>
 </head>
 
 <body>
 	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid navbar-container mt-3">
-			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+			<button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+				</svg>
 			</button>
 			<a class="navbar-brand mt-2 ms-5" href="{% url 'home' %}"><h1>INQSHOP</h1></a>
 			<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -98,17 +100,17 @@
 		</div>
 	</nav>
 
-	<div class="container-fluid w-50 cart-container">
+	<div class="container-fluid cart-container">
 		<h2 class="mt-5 ms-3 pt-3 text-center">Shopping Cart</h2>
 		<div class="items-list-div pt-5">
-			<div class="card mb-3 mx-3">
+			<div class="card mb-3 mx-3 rounded-0">
 				<div class="row g-0">
 					<div class="col">
 						<a href="#">
 							<img class="order-item-img ms-4 m-3 w-75 border border-5" src="{% static 'images/Covers/9780751565355.jpg' %}" class="img-fluid rounded-start" alt="...">
 						</a>
 					</div>
-					<div class="col-7">
+					<div class="col-7 my-auto">
 						<div class="card-body">
 							<h5 class="card-title"><a class="link-offset-2" href="#">Harry Potter and the Cursed Child - Parts I & II : The Official Script Book of the Original West End Production</a></h5>
 							<p class="card-text"><a class="link-offset-2" href="#">J. K. Rowling</a></p>

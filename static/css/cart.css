@@ -38,6 +38,10 @@ body {
 	margin:0px 0px 0px 12px;
 }
 
+.card {
+	border-style: groove none groove none;
+}
+
 #cart-icon {
 	width:40px;
 }
@@ -106,6 +110,10 @@ body {
 	width:25px;
 }
 
+.cart-container {
+	width:1000px;
+}
+
 
 
 
@@ -149,4 +157,11 @@ body {
 	#login-icon {
 		width:28px;
 	}
+
+	@media screen and (max-width:1000px){
+		.cart-container {
+			width:100%;
+		}
+	}
+
 }

@@ -18,8 +18,10 @@
 
 	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid navbar-container mt-3">
-			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+			<button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+				</svg>
 			</button>
 			<a class="navbar-brand mt-2 ms-5" href="{% url 'home' %}"><h1>INQSHOP</h1></a>
 			<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -45,28 +47,28 @@
 							<div class="dropdown-menu mx-auto">
 								<ul class="list-group categories-group" id="frst-grp">
 									<p class="categories-header">Fiction</p>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Comics & Graphic Novels</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Historical Fiction</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Horror</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Literature & Fiction</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Manga</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Mystery, Thrillers, & Crime</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Poetry</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Fantasy</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">LGBTQ+ Fiction</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Comics & Graphic Novels</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Historical Fiction</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Horror</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Literature & Fiction</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Manga</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Mystery, Thrillers, & Crime</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Poetry</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Fantasy</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">LGBTQ+ Fiction</a></li>
 								</ul>
 								<ul class="list-group list-group-flush categories-group">
 									<p class="categories-header">Non-Fiction</p>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Arts & Photography</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Biography & Memoir</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Business & Investing</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Cooking & Wine</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">History</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Humor & Games</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Science & Technology</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Self Development & Hobbies</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Spirituality & Religion</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Travel</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Arts & Photography</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Biography & Memoir</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Business & Investing</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Cooking & Wine</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">History</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Humor & Games</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Science & Technology</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Self Development & Hobbies</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Spirituality & Religion</a></li>
+									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="{% url 'search-category' %}">Travel</a></li>
 								</ul>
 							</div>
 						</li>
@@ -100,20 +102,20 @@
 	</nav>
 
 	<div class="container-fluid mt-3">
-		<div id="carouselExampleIndicators" class="carousel slide">
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
 				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			</div>
 			<div class="carousel-inner">
-				<div class="carousel-item active">
+				<div class="carousel-item active" data-bs-interval="3000">
 					<img src="{% static 'images/ADs/ad3.png' %}" class="d-block w-100" alt="...">
 				</div>
-				<div class="carousel-item">
+				<div class="carousel-item" data-bs-interval="3000">
 					<img src="{% static 'images/ADs/ad1.png' %}" class="d-block w-100" alt="...">
 				</div>
-				<div class="carousel-item">
+				<div class="carousel-item" data-bs-interval="3000">
 					<img src="{% static 'images/ADs/ad2.png' %}" class="d-block w-100" alt="...">
 				</div>
 			</div>
@@ -131,43 +133,115 @@
 	<h3 class="bestsellers-h3 mt-5 position-relative"><a href="#" class="link-dark link-offset-3">Best Sellers</a></h3>
 	<div class="container-fluid bestsellers-grid pt-5 w-75">
 		<div class="row mx-auto">
-			<div class="col">
-				<div class="card mx-auto" style="width: 18rem;">
-					<img src="{% static 'images/Covers/9780751565355.jpg' %}" class="card-img-top mx-auto" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Harry Potter and the Cursed Child - Parts I & II : The Official Script Book of the Original West End Production</h5>
-						<p class="card-text">J. K. Rowling</p>
-						<a href="#" class="btn btn-primary">Add to cart</a>
+			<div class="col book-card">
+				<div class="card mx-auto mb-4 border-0">
+					<div class="row">
+						<img src="{% static 'images/Covers/9780751565355.jpg' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
+						<div class="col">
+							<div class="card-body">
+								<h5 class="card-title">Harry Potter and the Cursed Child - Parts I & II : The Official Script Book of the Original West End Production</h5>
+								<p class="card-text">J. K. Rowling</p>
+								<a href="#" class="btn btn-primary">Add to cart</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col">
-				<div class="card mx-auto" style="width: 18rem;">
-					<img src="{% static 'images/Covers/9781471156267.jpg' %}" class="card-img-top mx-auto" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">It Ends With Us: The most heartbreaking novel you'll ever read : The most heartbreaking novel you'll ever read</h5>
-						<p class="card-text">Colleen Hoover</p>
-						<a href="#" class="btn btn-primary buy-btn">Add to cart</a>
+			<div class="col book-card">
+				<div class="card mx-auto mb-4 border-0">
+					<div class="row">
+						<img src="{% static 'images/Covers/9781471156267.jpg' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
+						<div class="col">
+							<div class="card-body">
+								<h5 class="card-title">t Ends With Us: The most heartbreaking novel you'll ever read : The most heartbreaking novel you'll ever read</h5>
+								<p class="card-text">Colleen Hoover</p>
+								<a href="#" class="btn btn-primary">Add to cart</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col f">
-				<div class="card mx-auto" style="width: 18rem;">
-					<img src="{% static 'images/Covers/9780712670579.jpg' %}" class="card-img-top mx-auto" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">The Original Rider Waite Tarot Deck : 78 beautifully illustrated cards and instructional booklet</h5>
-						<p class="card-text"> A.E. Waite , Illustrated by  Pamela Colman Smith</p>
-						<a href="#" class="btn btn-primary">Add to cart</a>
+			<div class="col book-card">
+				<div class="card mx-auto mb-4 border-0">
+					<div class="row">
+						<img src="{% static 'images/Covers/9780712670579.jpg' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
+						<div class="col">
+							<div class="card-body">
+								<h5 class="card-title">The Original Rider Waite Tarot Deck : 78 beautifully illustrated cards and instructional booklet</h5>
+								<p class="card-text">A.E. Waite , Illustrated by  Pamela Colman Smith</p>
+								<a href="#" class="btn btn-primary">Add to cart</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col">
-				<div class="card mx-auto" style="width: 18rem;">
-					<img src="{% static 'images/Covers/123345u234y5972.png' %}" class="card-img-top mx-auto" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">The Nap Ministry's Rest Deck: 50 Practices to Resist Grind Culture</h5>
-						<p class="card-text">Tricia Hersey</p>
-						<a href="#" class="btn btn-primary">Add to cart</a>
+			<div class="col book-card">
+				<div class="card mx-auto mb-4 border-0">
+					<div class="row">
+						<img src="{% static 'images/Covers/123345u234y5972.png' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
+						<div class="col">
+							<div class="card-body">
+								<h5 class="card-title">The Nap Ministry's Rest Deck: 50 Practices to Resist Grind Culture</h5>
+								<p class="card-text">Tricia Hersey</p>
+								<a href="#" class="btn btn-primary">Add to cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col book-card">
+				<div class="card mx-auto mb-4 border-0">
+					<div class="row">
+						<img src="{% static 'images/Covers/9780751565355.jpg' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
+						<div class="col">
+							<div class="card-body">
+								<h5 class="card-title">Harry Potter and the Cursed Child - Parts I & II : The Official Script Book of the Original West End Production</h5>
+								<p class="card-text">J. K. Rowling</p>
+								<a href="#" class="btn btn-primary">Add to cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col book-card">
+				<div class="card mx-auto mb-4 border-0">
+					<div class="row">
+						<img src="{% static 'images/Covers/9781471156267.jpg' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
+						<div class="col">
+							<div class="card-body">
+								<h5 class="card-title">t Ends With Us: The most heartbreaking novel you'll ever read : The most heartbreaking novel you'll ever read</h5>
+								<p class="card-text">Colleen Hoover</p>
+								<a href="#" class="btn btn-primary">Add to cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col book-card">
+				<div class="card mx-auto mb-4 border-0">
+					<div class="row">
+						<img src="{% static 'images/Covers/9780712670579.jpg' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
+						<div class="col">
+							<div class="card-body">
+								<h5 class="card-title">The Original Rider Waite Tarot Deck : 78 beautifully illustrated cards and instructional booklet</h5>
+								<p class="card-text">A.E. Waite , Illustrated by  Pamela Colman Smith</p>
+								<a href="#" class="btn btn-primary">Add to cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col book-card">
+				<div class="card mx-auto mb-4 border-0">
+					<div class="row">
+						<img src="{% static 'images/Covers/123345u234y5972.png' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
+						<div class="col">
+							<div class="card-body">
+								<h5 class="card-title">The Nap Ministry's Rest Deck: 50 Practices to Resist Grind Culture</h5>
+								<p class="card-text">Tricia Hersey</p>
+								<a href="#" class="btn btn-primary">Add to cart</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
