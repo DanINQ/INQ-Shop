@@ -1,0 +1,19 @@
+.names {
+	font-size: 30px;
+	font-family: 'Philosopher', sans-serif;
+}
+
+.main-container {
+	width:1000px;
+}
+
+.order-id {
+	font-size: 20px;
+}
+
+
+@media screen and (max-width:1000px){
+		.main-container {
+			width:100%;
+		}
+	}

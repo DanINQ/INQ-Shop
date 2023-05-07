@@ -1,11 +1,7 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+{% block head_content %}
 	<link href="{% static 'css/search-category.css' %}" rel="stylesheet" type="text/css">
 	<link href="{% static 'css/price-slider.css' %}" rel="stylesheet" type="text/css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,97 +9,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
 	<title>Category</title>
-</head>
+{% endblock head_content %}
 
-
-
-<body>
-
-	<nav class="navbar navbar-expand-lg">
-		<div class="container-fluid navbar-container mt-3">
-			<button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
-				<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-				</svg>
-			</button>
-			<a class="navbar-brand mt-2 ms-5" href="{% url 'home' %}"><h1>INQSHOP</h1></a>
-			<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-				<div class="mx-auto my-3 w-50 search-container">
-					<form class="d-flex" role="search">
-						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-success" type="submit">Search</button>
-					</form>
-				</div>
-				<div class="offcanvas-header">
-					<h5 class="offcanvas-title" id="offcanvasNavbar">Menu</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-				</div>
-				<div class="offcanvas-body">
-					<ul class="navbar-nav mx-auto">
-						<li class="nav-item pe-4">
-							<a class="nav-link active" aria-current="page" href="#">New</a>
-						</li>
-						<li class="nav-item dropdown pe-4">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Categories
-							</a>
-							<div class="dropdown-menu mx-auto">
-								<ul class="list-group categories-group" id="frst-grp">
-									<p class="categories-header">Fiction</p>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Comics & Graphic Novels</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Historical Fiction</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Horror</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Literature & Fiction</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Manga</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Mystery, Thrillers, & Crime</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Poetry</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Fantasy</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">LGBTQ+ Fiction</a></li>
-								</ul>
-								<ul class="list-group list-group-flush categories-group">
-									<p class="categories-header">Non-Fiction</p>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Arts & Photography</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Biography & Memoir</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Business & Investing</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Cooking & Wine</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">History</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Humor & Games</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Science & Technology</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Self Development & Hobbies</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Spirituality & Religion</a></li>
-									<li class="list-group-item border-0"><a class="link-dark link-offset-2" href="#">Travel</a></li>
-								</ul>
-							</div>
-						</li>
-						<li class="nav-item pe-4">
-							<a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-						</li>
-						<li class="nav-item pe-4">
-							<a class="nav-link active" aria-current="page" href="#">Special Offers</a>
-						</li>
-						<li class="nav-item pe-4">
-							<a class="nav-link disabled">Stationery</a>
-						</li>
-						<li class="nav-item pe-4">
-							<a class="nav-link disabled">Games & Puzzles</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="left-details">
-				<a href="{% url 'login' %}" class="link-dark link-offset-3 me-3 mb-lg-1" id="login">
-					<img id="login-icon"src="{% static 'images/account-icon.png' %}">
-				</a>
-				<a class="position-relative" href="{% url 'cart' %}">
-					<img class="me-3 mt-lg-1" id="cart-icon" src="{% static 'images/shopping-cart-icon.png' %}">
-					<span class="position-absolute top-100 start-50 translate-middle badge rounded-pill bg-primary">
-						0
-					</span>
-				</a>
-			</div>
-		</div>
-	</nav>
-
+{% block content %}
 	<div class="w-lg-75 container-fluid" id="main-cont">
 		<div class="ms-5 mt-5">
 			<nav aria-label="breadcrumb">
@@ -123,11 +31,10 @@
 				<div class="collapse navbar-collapse mt-lg-5 mb-5" id="filters-collapse">
 					<div class="container-fluid py-5 px-3" id="filters-cont">
 						<ul class="list-group list-group-flush ms-2">
-							<h5>Fiction</h5>
-							<li class="list-group-item"><a class="link-dark link-underline-opacity-0"" href="#">Some Category</a></li>
-							<li class="list-group-item"><a class="link-dark link-underline-opacity-0"" href="#">Some Category</a></li>
-							<li class="list-group-item"><a class="link-dark link-underline-opacity-0"" href="#">Some Category</a></li>
-							<li class="list-group-item"><a class="link-dark link-underline-opacity-0"" href="#">Some Category</a></li>
+							<h5>{{ category }}</h5>
+							{% for descendant in category_descendants %}
+							<li class="list-group-item"><a class="link-dark link-underline-opacity-0"" href="{% url 'search-category' category=descendant %}">{{ descendant }}</a></li>
+							{% endfor %}
 						</ul>
 						<form action="#">
 							<div class="wrapper">
@@ -174,145 +81,36 @@
 
 				<div class="container-fluid bestsellers-grid pt-5 w-100">
 					<div class="row mx-auto">
+						{% for book in books %}
 						<div class="col book-card">
 							<div class="card mx-auto mb-4 border-0">
 								<div class="row">
-									<img src="{% static 'images/Covers/9780751565355.jpg' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
+									<img src="{% static book.cover.url %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
 									<div class="col">
-										<div class="card-body">
-											<h5 class="card-title">Harry Potter and the Cursed Child - Parts I & II : The Official Script Book of the Original West End Production</h5>
-											<p class="card-text">J. K. Rowling</p>
+										<div class="card-body text-center mt-lg-2 mt-4">
+											<h5 class="card-title"><a href="#">{{book.title}}</a></h5>
+											<p class="card-text">
+												<a href="#">{% for author in book.author.all %}{{ author }}{% endfor %}</a>
+											</p>
+											<p class="book-type">{{ book.type }}</p>
+											<p class="price ms-3 fs-4">{{ book.price }} €</p>
 											<a href="#" class="btn btn-primary">Add to cart</a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col book-card">
-							<div class="card mx-auto mb-4 border-0">
-								<div class="row">
-									<img src="{% static 'images/Covers/9781471156267.jpg' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
-									<div class="col">
-										<div class="card-body">
-											<h5 class="card-title">t Ends With Us: The most heartbreaking novel you'll ever read : The most heartbreaking novel you'll ever read</h5>
-											<p class="card-text">Colleen Hoover</p>
-											<a href="#" class="btn btn-primary">Add to cart</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col book-card">
-							<div class="card mx-auto mb-4 border-0">
-								<div class="row">
-									<img src="{% static 'images/Covers/9780712670579.jpg' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
-									<div class="col">
-										<div class="card-body">
-											<h5 class="card-title">The Original Rider Waite Tarot Deck : 78 beautifully illustrated cards and instructional booklet</h5>
-											<p class="card-text">A.E. Waite , Illustrated by  Pamela Colman Smith</p>
-											<a href="#" class="btn btn-primary">Add to cart</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col book-card">
-							<div class="card mx-auto mb-4 border-0">
-								<div class="row">
-									<img src="{% static 'images/Covers/123345u234y5972.png' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
-									<div class="col">
-										<div class="card-body">
-											<h5 class="card-title">The Nap Ministry's Rest Deck: 50 Practices to Resist Grind Culture</h5>
-											<p class="card-text">Tricia Hersey</p>
-											<a href="#" class="btn btn-primary">Add to cart</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col book-card">
-							<div class="card mx-auto mb-4 border-0">
-								<div class="row">
-									<img src="{% static 'images/Covers/9780751565355.jpg' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
-									<div class="col">
-										<div class="card-body">
-											<h5 class="card-title">Harry Potter and the Cursed Child - Parts I & II : The Official Script Book of the Original West End Production</h5>
-											<p class="card-text">J. K. Rowling</p>
-											<a href="#" class="btn btn-primary">Add to cart</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col book-card">
-							<div class="card mx-auto mb-4 border-0">
-								<div class="row">
-									<img src="{% static 'images/Covers/9781471156267.jpg' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
-									<div class="col">
-										<div class="card-body">
-											<h5 class="card-title">t Ends With Us: The most heartbreaking novel you'll ever read : The most heartbreaking novel you'll ever read</h5>
-											<p class="card-text">Colleen Hoover</p>
-											<a href="#" class="btn btn-primary">Add to cart</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col book-card">
-							<div class="card mx-auto mb-4 border-0">
-								<div class="row">
-									<img src="{% static 'images/Covers/9780712670579.jpg' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
-									<div class="col">
-										<div class="card-body">
-											<h5 class="card-title">The Original Rider Waite Tarot Deck : 78 beautifully illustrated cards and instructional booklet</h5>
-											<p class="card-text">A.E. Waite , Illustrated by  Pamela Colman Smith</p>
-											<a href="#" class="btn btn-primary">Add to cart</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col book-card">
-							<div class="card mx-auto mb-4 border-0">
-								<div class="row">
-									<img src="{% static 'images/Covers/123345u234y5972.png' %}" class="card-img-top mx-auto my-2 border border-5" alt="...">
-									<div class="col">
-										<div class="card-body">
-											<h5 class="card-title">The Nap Ministry's Rest Deck: 50 Practices to Resist Grind Culture</h5>
-											<p class="card-text">Tricia Hersey</p>
-											<a href="#" class="btn btn-primary">Add to cart</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						{% endfor %}
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="container-fluid" id="bottom-part">
-		<div class="row mx-auto mt-5 pt-5 pb-5">
-			<div class="col mx-auto text-center pb-5">
-				<p class="bottom-links"><a href="#" class="text-white link-offset-2">About</a></p>
-				<p><a href="#" class="text-white link-offset-2">Support / Help</a></p>
-				<p><a href="#" class="text-white link-offset-2">Contact</a></p>
-				<p><a href="{% url 'login' %}" class="text-white link-offset-2">Sign In / Join</a></p>
-				<p><a href="#" class="text-white link-offset-2">Privacy Policy</a></p>
-				<p><a href="#" class="text-white link-offset-2">Terms and Conditions</a></p>
-			</div>
-			<div class="col mx-auto text-center">
-				<p class="text-white">Folow us</p>
-				<a href="#"><img class="social-media-icon me-2" src="{% static 'images/twitter-icon.png' %}"></a>
-				<a href="#"><img class="social-media-icon me-2" src="{% static 'images/facebook-icon.png' %}"></a>
-				<a href="#"><img class="social-media-icon me-2" src="{% static 'images/instagramm-icon.png' %}"></a>
-			</div>
-		</div>
-	</div>
 
+
+{% endblock content %}
+
+{% block js_connect %}
 	<script src="{% static 'js/price-slider.js' %}"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-</body>
-
-</html>
+{% endblock js_connect %}

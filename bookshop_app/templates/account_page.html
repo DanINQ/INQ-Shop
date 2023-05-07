@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_content %}
+<link href="{% static 'css/account-page.css' %}" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
+<title>INQSHOP</title>
+{% endblock head_content %}
+
+{% block content %}
+<div class="container-fluid main-container bg-white">
+	<div class="account-head mt-5 py-5 bg-white border-bottom border-3">
+		<p class="names ms-5 mb-5">{{user.first_name}} {{user.last_name}}</p>
+		<p class="d-inline-block mx-5">{{user.username}}</p>
+		<p class="d-inline-block mx-5">{{user.email}}</p>
+	</div>
+
+	<div class="row">
+		<div class="col-3 mt-5 text-center">
+			<p><a href="{% url 'logout' %}">Logout</a></p>
+			<p><a href="#">Change password</a></p>
+		</div>
+		<div class="col mt-3">
+			<h4 class="fw-semibold">Orders</h4>
+			<div class="order-container mt-4">
+				<p class="order-id"><a href="#">Order №23456</a></p>
+				<p class="">Creation date: 29-04-2023</p>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}
